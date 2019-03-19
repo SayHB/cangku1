@@ -50,3 +50,35 @@ console.log(removedItems);
 var copy = fruits.slice();
 console.log(copy);
 
+
+
+//使用一个合法的下标为数组元素赋值，并且该下标超出了当前数组的大小的时候，解释器会同时修改 length 的值
+fruits[5] = 'mango';
+console.log(Object.keys(fruits));
+console.log(fruits.length);
+
+
+//数组去重合并
+function combine() {
+
+    let arr = [].concat.apply([],arguments);
+    return Array.from(new Set(arr));
+}
+var n = [1,2,2],m = [2,3,3];
+console.log(combine(m,n));
+
+//如果原生不支持的话，在其他代码之前执行以下代码会创建 Array.of()
+if (!Array.of) {
+    Array.of = function() {
+        return Array.prototype.slice.call(arguments);
+    };
+}
+
+//用数组将一组值以表格形式显示
+values = [];
+for (var x = 0;x < 10; x++){
+    values.push([2 ** x,2 * x **2])
+};
+console.table(values);
+
+
