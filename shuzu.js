@@ -15,7 +15,7 @@ fruits.forEach(function(item,index,array){
 
 //添加元素到数组的末尾
 var newlength = fruits.push('orange');
-console.log(fruits);
+console.log(newlength);
 
 //删除数组末尾的元素
 var last = fruits.pop();
@@ -28,35 +28,6 @@ console.log(fruits);
 //添加元素到数组的头部
 var newlenth  = fruits.unshift('Strawberry');
 console.log(fruits);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //找出某个元素在数组中的索引
@@ -105,10 +76,72 @@ if (!Array.of) {
 
 //用数组将一组值以表格形式显示
 values = [];
-for (var x = 0;x < 10; x++){
+for (let x = 0;x < 10; x++){
     values.push([2 ** x,2 * x **2])
 };
 console.table(values);
 
 
-//vv
+//
+// switch(status){
+//
+//     case 1:
+//         console.log('1');
+//         break;
+//     case 2:
+//         console.log('2');
+//         break;
+//     case 3:
+//         console.log('3');
+//         break;
+//     default:
+//         break;
+// }
+// var book = {shu};
+function findIndex(id) {
+    var arr = [{name:1,id:1},{name:2,id:2}];
+    for(var i = 0;i < arr.length;i++){
+        var book = arr[i];
+        var bookid = book.id;
+        var bookname = book.name;
+        if(id == bookid){
+            return book;
+        }else{
+            console.log('null');
+        }
+    }
+}
+console.log(findIndex(2));
+
+
+var cars = [{name:1,id:1},{name:2,id:2},{name:3,id:3}];
+function findCar(car,index) {
+    return car.id == 3;
+}
+console.log(cars.findIndex(findCar));
+
+
+var books = [{name:1,id:1},{name:2,id:2}]
+function findBook(element,index) {
+    return element.id == 2;
+}
+console.log(books.findIndex(findBook));
+
+
+var person = {
+    name: ['hu','jj'],
+    age: 23,
+    gendar: 'male',
+    interests: ['basketball','film','music'],
+    bio: function () {
+        // alert( this.name[0]+ ' '+this.name[1]+'is'+ this.age +'years old.He is'+ this.gendar +'.He likes'+ this.interests[0] +'and' + this.interests[1] + '.');
+        console.log(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+    },
+    greeting:
+        function () {
+            console.log('Hi i\'m ' +this.name[0],this.name[1]+'.Nice to meet you!');
+
+    }
+}
+console.log(person.name[0]);
+console.log(person.bio());
