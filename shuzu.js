@@ -30,6 +30,35 @@ var newlenth  = fruits.unshift('Strawberry');
 console.log(fruits);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //找出某个元素在数组中的索引
 fruits.push('Mango');
 var pos = fruits.indexOf('Banana');
@@ -82,3 +111,4 @@ for (var x = 0;x < 10; x++){
 console.table(values);
 
 
+//vv
